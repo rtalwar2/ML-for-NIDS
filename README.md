@@ -30,6 +30,8 @@ The following packages are needed to run the code in this repository:
 ## Source Datasets
 The datasets used were part of [the NFV2-collection by the university of Queensland](https://staff.itee.uq.edu.au/marius/NIDS_datasets/) aimed at standardizing network-security datasets to achieve interoperability and larger analyses. The cleaned versions of these datasets were used and are available in [Kaggle](https://www.kaggle.com/dhoogla/datasets).
 
+The UNSW-NB15 dataset with metadata used for measuring the efficiency of our methodology is also available in [Kaggle](https://www.kaggle.com/datasets/ramantalwar00/unsw-nb15-with-metadata)
+
 ## Acknowledgements
 TODO
 
