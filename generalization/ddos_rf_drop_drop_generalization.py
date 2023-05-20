@@ -202,64 +202,6 @@ def inter_dataset():
                 prepared_result_rows.append(prepared_result_row)
     return prepared_result_rows
             
-# prepared_result_rows=inter_dataset()
-
-# fig, ax = plt.subplots(figsize=(15, 15))
-
-# stacked_array_norm = np.stack([row[2] for row in prepared_result_rows])
-# stacked_array_norm=stacked_array_norm.reshape(3,-1)
-# # create heatmap with annotations
-# sns.heatmap(stacked_array_norm, annot=True, fmt='.4f', cmap='YlGnBu', cbar=True, square=True, linewidths=.5, ax=ax)
-
-# # set title and labels
-# ax.set_title("inter-dataset generalization DDoS accuracy")
-# ax.set_xlabel('test')
-# ax.set_ylabel('train')
-
-# # set x and y ticklabels to categorical labels
-# ax.set_xticklabels(dataset_names)
-# ax.set_yticklabels(dataset_names, rotation=0, ha='right')
-# plt.subplots_adjust(left=0.2)
-# plt.savefig(f"/project_ghent/raman/images/accuracy_heatmap_ddos_rf.png")
-
-
-# fig, ax = plt.subplots(figsize=(15, 15))
-
-# stacked_array_norm = np.stack([row[4] for row in prepared_result_rows])
-# stacked_array_norm=stacked_array_norm.reshape(3,-1)
-# # create heatmap with annotations
-# sns.heatmap(stacked_array_norm, annot=True, fmt='.4f', cmap='YlGnBu', cbar=True, square=True, linewidths=.5, ax=ax)
-
-# # set title and labels
-# ax.set_title("inter-dataset generalization DDoS precision")
-# ax.set_xlabel('test')
-# ax.set_ylabel('train')
-
-# # set x and y ticklabels to categorical labels
-# ax.set_xticklabels(dataset_names)
-# ax.set_yticklabels(dataset_names, rotation=0, ha='right')
-# plt.subplots_adjust(left=0.2)
-# plt.savefig(f"/project_ghent/raman/images/precision_heatmap_ddos_rf.png")
-
-
-
-# fig, ax = plt.subplots(figsize=(15, 15))
-
-# stacked_array_norm = np.stack([row[6] for row in prepared_result_rows])
-# stacked_array_norm=stacked_array_norm.reshape(3,-1)
-# # create heatmap with annotations
-# sns.heatmap(stacked_array_norm, annot=True, fmt='.4f', cmap='YlGnBu', cbar=True, square=True, linewidths=.5, ax=ax)
-
-# # set title and labels
-# ax.set_title("inter-dataset generalization DDoS recall")
-# ax.set_xlabel('test')
-# ax.set_ylabel('train')
-
-# # set x and y ticklabels to categorical labels
-# ax.set_xticklabels(dataset_names)
-# ax.set_yticklabels(dataset_names, rotation=0, ha='right')
-# plt.subplots_adjust(left=0.2)
-# plt.savefig(f"/project_ghent/raman/images/recall_heatmap_ddos_rf.png")
 
 def drop_features(dataset,contaminant):
     if contaminant:
@@ -389,6 +331,10 @@ def make_plots(attack, model, name):
     # Save the combined plot
     plt.savefig(f"/project_ghent/raman/images/combined_heatmaps_{attack}_{model}_{name}_dropped.png")
 
+prepared_result_rows=inter_dataset()
+
+make_plots("DDoS", "rf", "_")
+
 print("drop contaminants")
 for k,v in datasets.items():
     print(datasets[k]["X_train"].shape)
@@ -399,63 +345,6 @@ prepared_result_rows=inter_dataset()
 
 make_plots("DDoS", "rf", "contaminants")
 
-# fig, ax = plt.subplots(figsize=(15, 15))
-
-# stacked_array_norm = np.stack([row[2] for row in prepared_result_rows])
-# stacked_array_norm=stacked_array_norm.reshape(3,-1)
-# # create heatmap with annotations
-# sns.heatmap(stacked_array_norm, annot=True, fmt='.4f', cmap='YlGnBu', cbar=True, square=True, linewidths=.5, ax=ax)
-
-# # set title and labels
-# ax.set_title("inter-dataset generalization DDoS accuracy dropped")
-# ax.set_xlabel('test')
-# ax.set_ylabel('train')
-
-# # set x and y ticklabels to categorical labels
-# ax.set_xticklabels(dataset_names)
-# ax.set_yticklabels(dataset_names, rotation=0, ha='right')
-# plt.subplots_adjust(left=0.2)
-# plt.savefig(f"/project_ghent/raman/images/accuracy_heatmap_ddos_rf_dropped.png")
-
-
-# fig, ax = plt.subplots(figsize=(15, 15))
-
-# stacked_array_norm = np.stack([row[4] for row in prepared_result_rows])
-# stacked_array_norm=stacked_array_norm.reshape(3,-1)
-# # create heatmap with annotations
-# sns.heatmap(stacked_array_norm, annot=True, fmt='.4f', cmap='YlGnBu', cbar=True, square=True, linewidths=.5, ax=ax)
-
-# # set title and labels
-# ax.set_title("inter-dataset generalization DDoS precision dropped")
-# ax.set_xlabel('test')
-# ax.set_ylabel('train')
-
-# # set x and y ticklabels to categorical labels
-# ax.set_xticklabels(dataset_names)
-# ax.set_yticklabels(dataset_names, rotation=0, ha='right')
-# plt.subplots_adjust(left=0.2)
-# plt.savefig(f"/project_ghent/raman/images/precision_heatmap_ddos_rf_dropped.png")
-
-
-
-# fig, ax = plt.subplots(figsize=(15, 15))
-
-# stacked_array_norm = np.stack([row[6] for row in prepared_result_rows])
-# stacked_array_norm=stacked_array_norm.reshape(3,-1)
-# # create heatmap with annotations
-# sns.heatmap(stacked_array_norm, annot=True, fmt='.4f', cmap='YlGnBu', cbar=True, square=True, linewidths=.5, ax=ax)
-
-# # set title and labels
-# ax.set_title("inter-dataset generalization DDoS recall dropped")
-# ax.set_xlabel('test')
-# ax.set_ylabel('train')
-
-# # set x and y ticklabels to categorical labels
-# ax.set_xticklabels(dataset_names)
-# ax.set_yticklabels(dataset_names, rotation=0, ha='right')
-# plt.subplots_adjust(left=0.2)
-# plt.savefig(f"/project_ghent/raman/images/recall_heatmap_ddos_rf_dropped.png")
-
 print("also drop generalization zone contaminants")
 for k,v in datasets.items():
     print(datasets[k]["X_train"].shape)
@@ -465,60 +354,3 @@ for k,v in datasets.items():
 prepared_result_rows=inter_dataset()
 
 make_plots("DDoS", "rf", "generalization contaminants")
-
-# fig, ax = plt.subplots(figsize=(15, 15))
-
-# stacked_array_norm = np.stack([row[2] for row in prepared_result_rows])
-# stacked_array_norm=stacked_array_norm.reshape(3,-1)
-# # create heatmap with annotations
-# sns.heatmap(stacked_array_norm, annot=True, fmt='.4f', cmap='YlGnBu', cbar=True, square=True, linewidths=.5, ax=ax)
-
-# # set title and labels
-# ax.set_title("inter-dataset generalization DDoS accuracy extra dropped")
-# ax.set_xlabel('test')
-# ax.set_ylabel('train')
-
-# # set x and y ticklabels to categorical labels
-# ax.set_xticklabels(dataset_names)
-# ax.set_yticklabels(dataset_names, rotation=0, ha='right')
-# plt.subplots_adjust(left=0.2)
-# plt.savefig(f"/project_ghent/raman/images/accuracy_heatmap_ddos_rf_extra_dropped.png")
-
-
-# fig, ax = plt.subplots(figsize=(15, 15))
-
-# stacked_array_norm = np.stack([row[4] for row in prepared_result_rows])
-# stacked_array_norm=stacked_array_norm.reshape(3,-1)
-# # create heatmap with annotations
-# sns.heatmap(stacked_array_norm, annot=True, fmt='.4f', cmap='YlGnBu', cbar=True, square=True, linewidths=.5, ax=ax)
-
-# # set title and labels
-# ax.set_title("inter-dataset generalization DDoS precision extra dropped")
-# ax.set_xlabel('test')
-# ax.set_ylabel('train')
-
-# # set x and y ticklabels to categorical labels
-# ax.set_xticklabels(dataset_names)
-# ax.set_yticklabels(dataset_names, rotation=0, ha='right')
-# plt.subplots_adjust(left=0.2)
-# plt.savefig(f"/project_ghent/raman/images/precision_heatmap_ddos_rf_extra_dropped.png")
-
-
-
-# fig, ax = plt.subplots(figsize=(15, 15))
-
-# stacked_array_norm = np.stack([row[6] for row in prepared_result_rows])
-# stacked_array_norm=stacked_array_norm.reshape(3,-1)
-# # create heatmap with annotations
-# sns.heatmap(stacked_array_norm, annot=True, fmt='.4f', cmap='YlGnBu', cbar=True, square=True, linewidths=.5, ax=ax)
-
-# # set title and labels
-# ax.set_title("inter-dataset generalization DDoS recall extra dropped")
-# ax.set_xlabel('test')
-# ax.set_ylabel('train')
-
-# # set x and y ticklabels to categorical labels
-# ax.set_xticklabels(dataset_names)
-# ax.set_yticklabels(dataset_names, rotation=0, ha='right')
-# plt.subplots_adjust(left=0.2)
-# plt.savefig(f"/project_ghent/raman/images/recall_heatmap_ddos_rf_extra_dropped.png")
