@@ -33,6 +33,18 @@ The datasets used were part of [the NFV2-collection by the university of Queensl
 The UNSW-NB15 dataset with metadata used for measuring the effectiveness of our methodology is also available in [Kaggle](https://www.kaggle.com/datasets/ramantalwar00/unsw-nb15-with-metadata)
 
 ## Acknowledgements
-TODO
+
+I would like to express my deepest gratitude to my supervisors Laurens D'hooge and Miel Verkerken for their invaluable guidance and support, and encouragement throughout the duration of this research. Their expertise and insightful feedback have played a pivotal role in shaping the direction and quality of this thesis.
+
+I am also thankful to the members of my thesis committee, prof. dr. Bruno Volckaert, dr. ir. Tim Wauters and prof. dr. ir. Filip De Turck, for providing me with the opportunity to conduct research in this field within the research group.
+
+I would like to extend my appreciation to imec for providing the necessary computing resources that enabled the successful completion of this research.
+
+A special thanks to all lecturers from the Information Engineering Technology Department at Ghent University for the high-quality education and these 4 interesting  years. Without them, I would not be where I am right now. Their expertise, passion, and dedication have been instrumental in shaping my understanding of the subject matter and laying a strong foundation for my research.
+
+My heartfelt thanks go to my family and friends for their unwavering love, encouragement, and understanding throughout this journey. Their constant support and belief in my abilities have been a source of inspiration and motivation. 
+
+Lastly, I express my gratitude to all the individuals who, directly or indirectly, have contributed to the completion of this thesis. Their contributions may not be explicitly mentioned, but their impact has been significant and deeply appreciated.
+
 
 Thank you for your interest in my research project! 😊
