@@ -1,4 +1,4 @@
-# Machine Learning for Network Intrusion Detection
+# Exploring Explainable AI techniques for Detecting Contamination Features for improved Machine Learning-based Intrusion Detection
 
 This repository contains the code and resources for my master's thesis on machine learning for network intrusion detection at Ghent University. The goal of this thesis is to develop a methodology that detects contaminating features in intrusion detection system (IDS) datasets using explainable artificial intelligence (XAI) techniques such as SHAP. Additionally, the inter-dataset generalization technique is employed to assess the impact of these features on the generalization ability of machine learning (ML) models.
 
