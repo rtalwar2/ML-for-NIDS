@@ -1,6 +1,22 @@
 | classifier | train dataset         | test dataset          | features                            | accuracy | std accuracy | precision | std precision | recall | std recall |
 |------------|-----------------------|-----------------------|-------------------------------------|----------|--------------|-----------|---------------|--------|------------|
-| rf         | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.996    | 0.0          | 0.994     | 0.0           | 0.998  | 0.0        |
+|   rf       | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.996    | 0.0          | 0.994     | 0.0           | 0.998  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.499    | 0.005        | 0.569     | 0.398         | 0.001  | 0.001      |
+|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.493    | 0.001        | 0.0       | 0.0           | 0.0    | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.431    | 0.011        | 0.041     | 0.049         | 0.006  | 0.007      |
+|            | NF-UNSW-NB15-V2       | NF-ToN-IoT-V2         |                                     | 0.262    | 0.159        | 0.223     | 0.153         | 0.279  | 0.321      |
+|            | NF-UNSW-NB15-V2       | NF-UNSW-NB15-V2       |                                     | 0.996    | 0.0          | 0.992     | 0.001         | 0.999  | 0.001      |
+|            | NF-UNSW-NB15-V2       | NF-BoT-IoT-V2         |                                     | 0.615    | 0.097        | 0.573     | 0.068         | 0.994  | 0.007      |
+|            | NF-UNSW-NB15-V2       | NF-CSE-CIC-IDS2018-V2 |                                     | 0.398    | 0.22         | 0.314     | 0.239         | 0.413  | 0.406      |
+|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.499    | 0.001        | 0.015     | 0.043         | 0.0    | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.5      | 0.0          | 0.15      | 0.32          | 0.0    | 0.001      |
+|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.502    | 0.003        | 0.723     | 0.368         | 0.004  | 0.007      |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.486    | 0.008        | 0.001     | 0.001         | 0.0    | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-UNSW-NB15-V2       |                                     | 0.507    | 0.008        | 0.686     | 0.442         | 0.016  | 0.014      |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.494    | 0.011        | 0.419     | 0.339         | 0.0    | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.996    | 0.0          | 0.994     | 0.0           | 0.998  | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.499    | 0.002        | 0.363     | 0.304         | 0.001  | 0.001      |
 |            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.492    | 0.002        | 0.0       | 0.0           | 0.0    | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.452    | 0.032        | 0.164     | 0.16          | 0.039  | 0.065      |
@@ -32,23 +48,23 @@
 |            | NF-CSE-CIC-IDS2018-V2 | NF-UNSW-NB15-V2       |                                     | 0.573    | 0.014        | 0.64      | 0.034         | 0.336  | 0.012      |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.416    | 0.002        | 0.444     | 0.002         | 0.672  | 0.004      |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 0.802    | 0.0          | 0.717     | 0.0           | 1.0    | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.996    | 0.0          | 0.994     | 0.0           | 0.998  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.499    | 0.005        | 0.569     | 0.398         | 0.001  | 0.001      |
-|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.493    | 0.001        | 0.0       | 0.0           | 0.0    | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.431    | 0.011        | 0.041     | 0.049         | 0.006  | 0.007      |
-|            | NF-UNSW-NB15-V2       | NF-ToN-IoT-V2         |                                     | 0.262    | 0.159        | 0.223     | 0.153         | 0.279  | 0.321      |
-|            | NF-UNSW-NB15-V2       | NF-UNSW-NB15-V2       |                                     | 0.996    | 0.0          | 0.992     | 0.001         | 0.999  | 0.001      |
-|            | NF-UNSW-NB15-V2       | NF-BoT-IoT-V2         |                                     | 0.615    | 0.097        | 0.573     | 0.068         | 0.994  | 0.007      |
-|            | NF-UNSW-NB15-V2       | NF-CSE-CIC-IDS2018-V2 |                                     | 0.398    | 0.22         | 0.314     | 0.239         | 0.413  | 0.406      |
-|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.499    | 0.001        | 0.015     | 0.043         | 0.0    | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.5      | 0.0          | 0.15      | 0.32          | 0.0    | 0.001      |
-|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.502    | 0.003        | 0.723     | 0.368         | 0.004  | 0.007      |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.486    | 0.008        | 0.001     | 0.001         | 0.0    | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-UNSW-NB15-V2       |                                     | 0.507    | 0.008        | 0.686     | 0.442         | 0.016  | 0.014      |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.494    | 0.011        | 0.419     | 0.339         | 0.0    | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
-| logistic   | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.962    | 0.0          | 0.946     | 0.0           | 0.98   | 0.0        |
+|logistic    | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.966    | 0.0          | 0.954     | 0.0           | 0.979  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.444    | 0.0          | 0.456     | 0.0           | 0.576  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.364    | 0.0          | 0.177     | 0.0           | 0.074  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.406    | 0.0          | 0.401     | 0.0           | 0.382  | 0.0        |
+|            | NF-UNSW-NB15-V2       | NF-ToN-IoT-V2         |                                     | 0.813    | 0.0          | 0.731     | 0.0           | 0.988  | 0.0        |
+|            | NF-UNSW-NB15-V2       | NF-UNSW-NB15-V2       |                                     | 0.984    | 0.0          | 0.987     | 0.0           | 0.982  | 0.0        |
+|            | NF-UNSW-NB15-V2       | NF-BoT-IoT-V2         |                                     | 0.648    | 0.0          | 0.602     | 0.0           | 0.879  | 0.0        |
+|            | NF-UNSW-NB15-V2       | NF-CSE-CIC-IDS2018-V2 |                                     | 0.231    | 0.0          | 0.077     | 0.0           | 0.049  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.139    | 0.0          | 0.073     | 0.0           | 0.062  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.618    | 0.0          | 0.629     | 0.0           | 0.574  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.995    | 0.0          | 0.997     | 0.0           | 0.994  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.528    | 0.0          | 0.535     | 0.0           | 0.435  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.294    | 0.0          | 0.092     | 0.0           | 0.046  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-UNSW-NB15-V2       |                                     | 0.598    | 0.0          | 0.654     | 0.0           | 0.417  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.482    | 0.0          | 0.47      | 0.0           | 0.278  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 0.996    | 0.0          | 0.998     | 0.0           | 0.995  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.962    | 0.0          | 0.946     | 0.0           | 0.98   | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.405    | 0.0          | 0.427     | 0.0           | 0.557  | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.396    | 0.0          | 0.403     | 0.0           | 0.434  | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.541    | 0.0          | 0.534     | 0.0           | 0.654  | 0.0        |
@@ -80,23 +96,23 @@
 |            | NF-CSE-CIC-IDS2018-V2 | NF-UNSW-NB15-V2       |                                     | 0.502    | 0.0          | 1.0       | 0.0           | 0.005  | 0.0        |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.5      | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 0.796    | 0.0          | 0.71      | 0.0           | 1.0    | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.966    | 0.0          | 0.954     | 0.0           | 0.979  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.444    | 0.0          | 0.456     | 0.0           | 0.576  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.364    | 0.0          | 0.177     | 0.0           | 0.074  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.406    | 0.0          | 0.401     | 0.0           | 0.382  | 0.0        |
-|            | NF-UNSW-NB15-V2       | NF-ToN-IoT-V2         |                                     | 0.813    | 0.0          | 0.731     | 0.0           | 0.988  | 0.0        |
-|            | NF-UNSW-NB15-V2       | NF-UNSW-NB15-V2       |                                     | 0.984    | 0.0          | 0.987     | 0.0           | 0.982  | 0.0        |
-|            | NF-UNSW-NB15-V2       | NF-BoT-IoT-V2         |                                     | 0.648    | 0.0          | 0.602     | 0.0           | 0.879  | 0.0        |
-|            | NF-UNSW-NB15-V2       | NF-CSE-CIC-IDS2018-V2 |                                     | 0.231    | 0.0          | 0.077     | 0.0           | 0.049  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.139    | 0.0          | 0.073     | 0.0           | 0.062  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.618    | 0.0          | 0.629     | 0.0           | 0.574  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.995    | 0.0          | 0.997     | 0.0           | 0.994  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.528    | 0.0          | 0.535     | 0.0           | 0.435  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.294    | 0.0          | 0.092     | 0.0           | 0.046  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-UNSW-NB15-V2       |                                     | 0.598    | 0.0          | 0.654     | 0.0           | 0.417  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.482    | 0.0          | 0.47      | 0.0           | 0.278  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 0.996    | 0.0          | 0.998     | 0.0           | 0.995  | 0.0        |
-| tabular_lr | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.955    | 0.0          | 0.989     | 0.0           | 0.921  | 0.0        |
+|tabular_lr  | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.961    | 0.0          | 0.985     | 0.0           | 0.937  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.419    | 0.0          | 0.435     | 0.0           | 0.539  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.499    | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.24     | 0.0          | 0.053     | 0.0           | 0.031  | 0.0        |
+|            | NF-UNSW-NB15-V2       | NF-ToN-IoT-V2         |                                     | 0.211    | 0.0          | 0.122     | 0.0           | 0.093  | 0.0        |
+|            | NF-UNSW-NB15-V2       | NF-UNSW-NB15-V2       |                                     | 0.915    | 0.0          | 0.96      | 0.0           | 0.867  | 0.0        |
+|            | NF-UNSW-NB15-V2       | NF-BoT-IoT-V2         |                                     | 0.892    | 0.0          | 0.841     | 0.0           | 0.968  | 0.0        |
+|            | NF-UNSW-NB15-V2       | NF-CSE-CIC-IDS2018-V2 |                                     | 0.259    | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.616    | 0.0          | 0.568     | 0.0           | 0.968  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.5      | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.926    | 0.0          | 0.872     | 0.0           | 1.0    | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.593    | 0.0          | 0.691     | 0.0           | 0.337  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.5      | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-UNSW-NB15-V2       |                                     | 0.5      | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.497    | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 1.0      | 0.0          | 0.999     | 0.0           | 1.0    | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.955    | 0.0          | 0.989     | 0.0           | 0.921  | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.537    | 0.0          | 0.571     | 0.0           | 0.295  | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.538    | 0.0          | 0.521     | 0.0           | 0.926  | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.956    | 0.0          | 0.973     | 0.0           | 0.939  | 0.0        |
@@ -128,23 +144,23 @@
 |            | NF-CSE-CIC-IDS2018-V2 | NF-UNSW-NB15-V2       |                                     | 0.501    | 0.0          | 1.0       | 0.0           | 0.003  | 0.0        |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.5      | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 0.799    | 0.0          | 0.713     | 0.0           | 1.0    | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.961    | 0.0          | 0.985     | 0.0           | 0.937  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.419    | 0.0          | 0.435     | 0.0           | 0.539  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.499    | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.24     | 0.0          | 0.053     | 0.0           | 0.031  | 0.0        |
-|            | NF-UNSW-NB15-V2       | NF-ToN-IoT-V2         |                                     | 0.211    | 0.0          | 0.122     | 0.0           | 0.093  | 0.0        |
-|            | NF-UNSW-NB15-V2       | NF-UNSW-NB15-V2       |                                     | 0.915    | 0.0          | 0.96      | 0.0           | 0.867  | 0.0        |
-|            | NF-UNSW-NB15-V2       | NF-BoT-IoT-V2         |                                     | 0.892    | 0.0          | 0.841     | 0.0           | 0.968  | 0.0        |
-|            | NF-UNSW-NB15-V2       | NF-CSE-CIC-IDS2018-V2 |                                     | 0.259    | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.616    | 0.0          | 0.568     | 0.0           | 0.968  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.5      | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.926    | 0.0          | 0.872     | 0.0           | 1.0    | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.593    | 0.0          | 0.691     | 0.0           | 0.337  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.5      | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-UNSW-NB15-V2       |                                     | 0.5      | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.497    | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 1.0      | 0.0          | 0.999     | 0.0           | 1.0    | 0.0        |
-| knn        | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.994    | 0.0          | 0.992     | 0.0           | 0.997  | 0.0        |
+|  knn       | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.994    | 0.0          | 0.992     | 0.0           | 0.997  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.537    | 0.0          | 0.583     | 0.0           | 0.259  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.506    | 0.0          | 0.538     | 0.0           | 0.081  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.38     | 0.0          | 0.005     | 0.0           | 0.001  | 0.0        |
+|            | NF-UNSW-NB15-V2       | NF-ToN-IoT-V2         |                                     | 0.643    | 0.0          | 0.584     | 0.0           | 0.998  | 0.0        |
+|            | NF-UNSW-NB15-V2       | NF-UNSW-NB15-V2       |                                     | 0.983    | 0.0          | 0.981     | 0.0           | 0.985  | 0.0        |
+|            | NF-UNSW-NB15-V2       | NF-BoT-IoT-V2         |                                     | 0.652    | 0.0          | 0.6       | 0.0           | 0.91   | 0.0        |
+|            | NF-UNSW-NB15-V2       | NF-CSE-CIC-IDS2018-V2 |                                     | 0.769    | 0.0          | 0.684     | 0.0           | 0.999  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.612    | 0.0          | 0.566     | 0.0           | 0.968  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.688    | 0.0          | 0.796     | 0.0           | 0.506  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.735    | 0.0          | 0.759     | 0.0           | 0.689  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.703    | 0.0          | 0.816     | 0.0           | 0.525  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-UNSW-NB15-V2       |                                     | 0.381    | 0.0          | 0.379     | 0.0           | 0.371  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.712    | 0.0          | 0.645     | 0.0           | 0.941  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.994    | 0.0          | 0.992     | 0.0           | 0.997  | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.488    | 0.0          | 0.472     | 0.0           | 0.199  | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.505    | 0.0          | 0.532     | 0.0           | 0.081  | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.825    | 0.0          | 0.809     | 0.0           | 0.851  | 0.0        |
@@ -176,19 +192,3 @@
 |            | NF-CSE-CIC-IDS2018-V2 | NF-UNSW-NB15-V2       |                                     | 0.505    | 0.0          | 0.627     | 0.0           | 0.024  | 0.0        |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.448    | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 0.752    | 0.0          | 0.998     | 0.0           | 0.504  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.994    | 0.0          | 0.992     | 0.0           | 0.997  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.537    | 0.0          | 0.583     | 0.0           | 0.259  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.506    | 0.0          | 0.538     | 0.0           | 0.081  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.38     | 0.0          | 0.005     | 0.0           | 0.001  | 0.0        |
-|            | NF-UNSW-NB15-V2       | NF-ToN-IoT-V2         |                                     | 0.643    | 0.0          | 0.584     | 0.0           | 0.998  | 0.0        |
-|            | NF-UNSW-NB15-V2       | NF-UNSW-NB15-V2       |                                     | 0.983    | 0.0          | 0.981     | 0.0           | 0.985  | 0.0        |
-|            | NF-UNSW-NB15-V2       | NF-BoT-IoT-V2         |                                     | 0.652    | 0.0          | 0.6       | 0.0           | 0.91   | 0.0        |
-|            | NF-UNSW-NB15-V2       | NF-CSE-CIC-IDS2018-V2 |                                     | 0.769    | 0.0          | 0.684     | 0.0           | 0.999  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.612    | 0.0          | 0.566     | 0.0           | 0.968  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-UNSW-NB15-V2       |                                     | 0.688    | 0.0          | 0.796     | 0.0           | 0.506  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.735    | 0.0          | 0.759     | 0.0           | 0.689  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.703    | 0.0          | 0.816     | 0.0           | 0.525  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-UNSW-NB15-V2       |                                     | 0.381    | 0.0          | 0.379     | 0.0           | 0.371  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.712    | 0.0          | 0.645     | 0.0           | 0.941  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
