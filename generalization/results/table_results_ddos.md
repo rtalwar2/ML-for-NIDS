@@ -1,7 +1,16 @@
 
 | classifier | train dataset         | test dataset          | features                            | accuracy | std accuracy | precision | std precision | recall | std recall |
 |------------|-----------------------|-----------------------|-------------------------------------|----------|--------------|-----------|---------------|--------|------------|
-| rf         | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.997    | 0.0          | 0.997     | 0.0           | 0.998  | 0.0        |
+| rf         | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.997    | 0.0          | 0.997     | 0.0           | 0.998  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.495    | 0.002        | 0.0       | 0.0           | 0.0    | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.487    | 0.002        | 0.0       | 0.0           | 0.0    | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.499    | 0.0          | 0.051     | 0.152         | 0.0    | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.5      | 0.0          | 0.007     | 0.02          | 0.0    | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.499    | 0.001        | 0.045     | 0.134         | 0.0    | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.474    | 0.004        | 0.0       | 0.0           | 0.0    | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.997    | 0.0          | 0.997     | 0.0           | 0.998  | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.495    | 0.001        | 0.0       | 0.0           | 0.0    | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.517    | 0.105        | 0.095     | 0.284         | 0.07   | 0.211      |
 |            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.499    | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
@@ -19,16 +28,16 @@
 |            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.489    | 0.0          | 0.493     | 0.0           | 0.832  | 0.0        |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.58     | 0.0          | 0.543     | 0.0           | 0.998  | 0.0        |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 0.802    | 0.0          | 0.716     | 0.0           | 1.0    | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.997    | 0.0          | 0.997     | 0.0           | 0.998  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.495    | 0.002        | 0.0       | 0.0           | 0.0    | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.487    | 0.002        | 0.0       | 0.0           | 0.0    | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.499    | 0.0          | 0.051     | 0.152         | 0.0    | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.5      | 0.0          | 0.007     | 0.02          | 0.0    | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.499    | 0.001        | 0.045     | 0.134         | 0.0    | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.474    | 0.004        | 0.0       | 0.0           | 0.0    | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
-| logistic   | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.911    | 0.0          | 0.887     | 0.0           | 0.944  | 0.0        |
+|logistic    | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.921    | 0.0          | 0.905     | 0.0           | 0.941  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.417    | 0.0          | 0.415     | 0.0           | 0.409  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.724    | 0.0          | 0.683     | 0.0           | 0.836  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.374    | 0.0          | 0.399     | 0.0           | 0.497  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.999    | 0.0          | 0.999     | 0.0           | 1.0    | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.785    | 0.0          | 0.705     | 0.0           | 0.981  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.533    | 0.0          | 0.677     | 0.0           | 0.126  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.47     | 0.0          | 0.003     | 0.0           | 0.0    | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 0.997    | 0.0          | 0.998     | 0.0           | 0.995  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.911    | 0.0          | 0.887     | 0.0           | 0.944  | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.755    | 0.0          | 0.672     | 0.0           | 0.997  | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.374    | 0.0          | 0.201     | 0.0           | 0.084  | 0.0        |
 |            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.358    | 0.0          | 0.392     | 0.0           | 0.517  | 0.0        |
@@ -46,16 +55,16 @@
 |            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.5      | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.5      | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 0.802    | 0.0          | 0.716     | 0.0           | 0.998  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.921    | 0.0          | 0.905     | 0.0           | 0.941  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.417    | 0.0          | 0.415     | 0.0           | 0.409  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.724    | 0.0          | 0.683     | 0.0           | 0.836  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.374    | 0.0          | 0.399     | 0.0           | 0.497  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.999    | 0.0          | 0.999     | 0.0           | 1.0    | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.785    | 0.0          | 0.705     | 0.0           | 0.981  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.533    | 0.0          | 0.677     | 0.0           | 0.126  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.47     | 0.0          | 0.003     | 0.0           | 0.0    | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 0.997    | 0.0          | 0.998     | 0.0           | 0.995  | 0.0        |
-| tabular_lr | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.909    | 0.0          | 0.855     | 0.0           | 0.984  | 0.0        |
+|tabular_lr  | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.988    | 0.0          | 0.992     | 0.0           | 0.983  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.389    | 0.0          | 0.01      | 0.0           | 0.002  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.365    | 0.0          | 0.098     | 0.0           | 0.033  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.447    | 0.0          | 0.451     | 0.0           | 0.481  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.999    | 0.0          | 1.0       | 0.0           | 0.999  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.161    | 0.0          | 0.026     | 0.0           | 0.019  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.498    | 0.0          | 0.103     | 0.0           | 0.0    | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.45     | 0.0          | 0.001     | 0.0           | 0.0    | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                | 0.909    | 0.0          | 0.855     | 0.0           | 0.984  | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.5      | 0.0          | 0.085     | 0.0           | 0.0    | 0.0        |
 |            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.396    | 0.0          | 0.012     | 0.0           | 0.003  | 0.0        |
 |            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.499    | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
@@ -73,16 +82,16 @@
 |            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.5      | 0.0          | 0.0       | 0.0           | 0.0    | 0.0        |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.498    | 0.0          | 0.049     | 0.0           | 0.0    | 0.0        |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 0.501    | 0.0          | 0.736     | 0.0           | 0.002  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.988    | 0.0          | 0.992     | 0.0           | 0.983  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.389    | 0.0          | 0.01      | 0.0           | 0.002  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.365    | 0.0          | 0.098     | 0.0           | 0.033  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.447    | 0.0          | 0.451     | 0.0           | 0.481  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.999    | 0.0          | 1.0       | 0.0           | 0.999  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.161    | 0.0          | 0.026     | 0.0           | 0.019  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.498    | 0.0          | 0.103     | 0.0           | 0.0    | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.45     | 0.0          | 0.001     | 0.0           | 0.0    | 0.0        |
+|knn         | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.996    | 0.0          | 0.995     | 0.0           | 0.997  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.423    | 0.0          | 0.006     | 0.0           | 0.001  | 0.0        |
+|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.483    | 0.0          | 0.421     | 0.0           | 0.09   | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.552    | 0.0          | 0.735     | 0.0           | 0.164  | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
+|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.407    | 0.0          | 0.061     | 0.0           | 0.013  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.766    | 0.0          | 0.894     | 0.0           | 0.602  | 0.0        |
+|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.295    | 0.0          | 0.001     | 0.0           | 0.0    | 0.0        |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
-| knn        | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                |          |              |           |               |        |            |
+|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | contaminants dropped                |          |              |           |               |        |            |
 |            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     |          |              |           |               |        |            |
 |            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     |          |              |           |               |        |            |
 |            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     |          |              |           |               |        |            |
@@ -100,12 +109,3 @@
 |            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     |          |              |           |               |        |            |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     |          |              |           |               |        |            |
 |            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     |          |              |           |               |        |            |
-|            | NF-ToN-IoT-V2         | NF-ToN-IoT-V2         | all features                        | 0.996    | 0.0          | 0.995     | 0.0           | 0.997  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-BoT-IoT-V2         |                                     | 0.423    | 0.0          | 0.006     | 0.0           | 0.001  | 0.0        |
-|            | NF-ToN-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.483    | 0.0          | 0.421     | 0.0           | 0.09   | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-ToN-IoT-V2         |                                     | 0.552    | 0.0          | 0.735     | 0.0           | 0.164  | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-BoT-IoT-V2         |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
-|            | NF-BoT-IoT-V2         | NF-CSE-CIC-IDS2018-V2 |                                     | 0.407    | 0.0          | 0.061     | 0.0           | 0.013  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-ToN-IoT-V2         |                                     | 0.766    | 0.0          | 0.894     | 0.0           | 0.602  | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-BoT-IoT-V2         |                                     | 0.295    | 0.0          | 0.001     | 0.0           | 0.0    | 0.0        |
-|            | NF-CSE-CIC-IDS2018-V2 | NF-CSE-CIC-IDS2018-V2 |                                     | 1.0      | 0.0          | 1.0       | 0.0           | 1.0    | 0.0        |
