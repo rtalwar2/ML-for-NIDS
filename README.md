@@ -36,17 +36,33 @@ The UNSW-NB15 dataset with metadata used for measuring the effectiveness of our 
 
 ## Acknowledgements
 
-I would like to express my deepest gratitude to my supervisors Laurens D'hooge and Miel Verkerken for their invaluable guidance and support, and encouragement throughout the duration of this research. Their expertise and insightful feedback have played a pivotal role in shaping the direction and quality of this thesis.
+I would like to express my deepest gratitude to all people who helped me with guidance and advice for finishing this thesis.
 
-I am also thankful to the members of my thesis committee, prof. dr. Bruno Volckaert, dr. ir. Tim Wauters and prof. dr. ir. Filip De Turck, for providing me with the opportunity to conduct research in this field within the research group.
+First and foremost my supervisors Laurens D’hooge and Miel Verkerken for their invaluable guidance and support throughout
+the duration of this research. Their research and discoveries have played a pivotal role in shaping the direction and quality of
+this thesis. Also, their persistence in encouraging me to take full ownership of the research and pursue my own ideas made
+this research into something I can really call my own.
 
-I would like to extend my appreciation to imec for providing the necessary computing resources that enabled the successful completion of this research.
+I am also thankful to the members of my thesis committee, prof. dr. Bruno Volckaert, dr. ir. Tim Wauters and Prof. dr. ir. Filip
+De Turck, for providing me with the opportunity to conduct research in this field within the research group.
 
-A special thanks to all lecturers from the Information Engineering Technology Department at Ghent University for the high-quality education and these 4 interesting  years. Without them, I would not be where I am right now. Their expertise, passion, and dedication have been instrumental in shaping my understanding of the subject matter and laying a strong foundation for my research.
+I would like to extend my appreciation to imec for providing the necessary computing resources that enabled the successful
+completion of this research.
 
-My heartfelt thanks go to my family and friends for their unwavering love, encouragement, and understanding throughout this journey. Their constant support and belief in my abilities have been a source of inspiration and motivation. 
+Also a thanks to the NYCU for their willingness to collaborate. I am particularly grateful to Didik Sudyana and Fietyata
+Yudha, despite the fact that we were unable to pursue the collaboration I had initially envisioned due to challenges with
+data quality and time limitations. Nonetheless, both of them displayed a readiness to assist me and provided valuable
+explanations regarding the CREMEv2 data.
 
-Lastly, I express my gratitude to all the individuals who, directly or indirectly, have contributed to the completion of this thesis. Their contributions may not be explicitly mentioned, but their impact has been significant and deeply appreciated.
+A special thanks to all lecturers from the Information Engineering Technology Department at Ghent University for the highquality education and these 4 interesting years. Without them, I would not be where I am right now. Their expertise, passion,
+and dedication have been instrumental in shaping my understanding of the subject matter and laying a strong foundation
+for my research.
 
+My heartfelt thanks go to my family for giving me this opportunity to study and get this degree.
+
+Additionally, I should not forget my friends, who have made the past four years simply fly by. It is through their companionship that I have created unforgettable memories throughout my journey that will forever be cherished.
+
+Lastly, I express my gratitude to all the individuals who, directly or indirectly, have contributed to the completion of this
+thesis. Their contributions may not be explicitly mentioned, but their impact has been significant and deeply appreciated.
 
 Thank you for your interest in my research project! 😊
